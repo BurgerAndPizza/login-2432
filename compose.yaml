@@ -1,0 +1,19 @@
+services:
+  student:
+    image: aksh2001/login-2432:1.1
+    ports:
+      - "8100:80"
+  trainer:
+    image: aksh2001/login-2432:2.1
+    ports:
+      - "8200:80"
+
+  admin:
+    image: aksh2001/login-2432:3.1
+    ports:
+      - "8300:80"
+  ecomm:
+    build: ./ecomm
+    image: aksh2001/ecomm
+    ports:
+      - "8400:80"
