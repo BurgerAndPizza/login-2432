@@ -1,0 +1,35 @@
+# - comment ignored by k8s
+
+# Simple key values
+key: value
+
+#Incorrect form
+key:value
+key :value
+key value
+
+# More key values
+name: aksh
+city: hyderabad
+time: 2pm
+
+# dictonary/map :  In Kubernetes, the equivalent of a "dictionary" or "map" is called a ConfigMap; it's a Kubernetes resource that stores configuration data as key-value pairs, allowing you to easily access specific settings within your applications by using their corresponding keys
+
+trainer: 
+  name: jhon
+  city: hyd
+  time: 2pm
+
+# Incorrect form
+student:
+id: 20
+course: aws
+
+# List/Array -  Lists used to represent a list of items. Each item in the list is a list of key/value pairs. 
+course:
+- aws
+- azure
+- devops
+- python
+
+#Pod: A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
