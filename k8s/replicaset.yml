@@ -1,19 +1,18 @@
-appVersion: apps/v1
+apiVersion: apps/v1
 kind: ReplicaSet
-metadata: 
+metadata:
   name: nginx
-spec: 
+spec:
   replicas: 1
   selector:
-    matchables:
+    matchLabels:  # Corrected "matchables" to "matchLabels"
       app: nginx
-  template:  #Pod template
+  template:  # Pod template
     metadata:
       labels:
         app: nginx
     spec:
       containers:
-      # Run the nginx
       - name: nginx
         image: nginx:1.14
         ports:
