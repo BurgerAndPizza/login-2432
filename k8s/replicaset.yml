@@ -1,0 +1,18 @@
+appVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: nginx
+spec: 
+  replicas: 3
+  selector:
+    matchables:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      # Run the nginx
+      - name: nginx
+        image: nginx:1.14
